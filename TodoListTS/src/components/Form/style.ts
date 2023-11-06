@@ -1,4 +1,6 @@
 import styled from 'styled-components'
+import { thema } from '../../styles/thema'
+
 
 export const Main = styled.main `
     display: flex;
@@ -8,7 +10,7 @@ export const Main = styled.main `
 
     justify-content: center;
     align-items: center;
-    background-color:#294380
+    background-color:${thema.primaryColor}
 
 `
 
@@ -18,27 +20,28 @@ export const Form = styled.form `
     justify-content: space-evenly;
     align-items: center;
     
+
     width:450px;
     height: 450px;
     padding:1rem;
-    background-color: #0d0f36;
+    background-color:${thema.prymariColorBold} ;
     border-radius:15px;
-
+ border:2px solid white;
     label {
         width:80%;
         color:white;
         display:flex;
         flex-direction:column;
         
-        gap:1rem;
+        gap:1.5rem;
         font-weight: bold;
         font-size:2rem;
 
         input {
             width:90%;
-            border-radius:15px;
+            border-radius:5px;
             border:none;
-            padding:.8rem;
+            padding:.9rem;
             &::placeholder {
                 font-weight: bold;
                 font-size: 1.2rem;
@@ -49,8 +52,7 @@ export const Form = styled.form `
 
     button {
         width:80%;
-        background-color:#69d2cd;
-        color:white;
+        background-color:${thema.seconColor};
         padding:.8rem;
         border-radius:15px;
         border:none;

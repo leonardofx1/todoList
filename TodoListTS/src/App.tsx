@@ -1,15 +1,15 @@
-import Form from './assets/components/Form/index';
+import Form from "./components/Form/index";
+import { Header } from "./components/Header";
 
 
 
 function App() {
-
-
   return (
- 
-        <Form/ >
-
-  )
+    <>
+      <Header />
+      <Form />
+    </>
+  );
 }
 
-export default App
+export default App;
