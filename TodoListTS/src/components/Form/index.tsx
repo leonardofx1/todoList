@@ -1,4 +1,5 @@
 import * as S from "./style";
+import TaskList from '../TaskList';
 
 const Form = () => {
   return (
@@ -8,6 +9,7 @@ const Form = () => {
         <input type="text" name="tarefas" id="tarefas" placeholder="criar tarefa" /></label>
         <button> adicionar tarefa</button>
         </S.Form>
+        <TaskList />
     </S.Main>
   );
 };
