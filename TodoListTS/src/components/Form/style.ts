@@ -51,13 +51,22 @@ export const Form = styled.form `
     }
 
     button {
+        display:flex;
+        align-items: center;
+        justify-content: center;
         width:80%;
         background-color:${thema.seconColor};
-        padding:.8rem;
         border-radius:15px;
         border:none;
 
         font-size:1.2rem;
         font-weight:bold;
+
+        cursor:pointer;
+
+        span {
+            margin: 5px 15px 0 0;
+            font-size: 2.5rem;
+        }
     }
 `
