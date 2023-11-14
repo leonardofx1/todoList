@@ -1,5 +1,5 @@
 export interface TaskType {
     textTask:string
-    id?:number
+    id:number
     completed: boolean
 }
