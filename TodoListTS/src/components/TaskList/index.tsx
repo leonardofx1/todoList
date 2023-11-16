@@ -1,10 +1,10 @@
 import { TaskType } from "../../../types/types";
 
 import { MdOutlineTaskAlt } from "react-icons/md";
-import { AiFillCloseCircle, AiFillWarning } from "react-icons/ai";
+import {  AiFillWarning } from "react-icons/ai";
 import { BsFillTrash3Fill, BsFillPencilFill } from "react-icons/bs";
 import * as S from "./style";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 import Modal from "../Modal";
 type TaskProps = { 
   task: TaskType
