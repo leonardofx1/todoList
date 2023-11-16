@@ -4,17 +4,23 @@ import { MdOutlineTaskAlt } from "react-icons/md";
 import { AiFillCloseCircle, AiFillWarning } from "react-icons/ai";
 import { BsFillTrash3Fill, BsFillPencilFill } from "react-icons/bs";
 import * as S from "./style";
+import { Dispatch, SetStateAction, useState } from "react";
+import Modal from "../Modal";
 type TaskProps = { 
   task: TaskType
   removeFromTask: (id: number) => void
   changeTaskStatus: (id: number) => void
-  
+  editFromTask: (id: number, newText:string) => void
+
   };
 
-const TaskList = ({ task, removeFromTask, changeTaskStatus }: TaskProps) => {
-  console.log(task)
+const TaskList = ({ task, removeFromTask, changeTaskStatus, editFromTask }: TaskProps) => {
+  const [showModal,setShowModal] = useState<boolean>(false)
+
   return (
-    <S.Task>
+
+    <S.Task key={task.id}>
+    {showModal && <Modal id={task.id} todo={task} setShowModal={setShowModal} editFromTask={editFromTask}/>}
       <S.TaskStatusIcon color="yellow">
 
         <AiFillWarning /> pendente
@@ -22,7 +28,7 @@ const TaskList = ({ task, removeFromTask, changeTaskStatus }: TaskProps) => {
       <S.TaskContent>{task.textTask}</S.TaskContent>
 
       <S.ActionIconContainer>
-        <S.ActionIcon color="white">
+        <S.ActionIcon onClick={()=> setShowModal(true)}color="white">
           <BsFillPencilFill title="editar" />
           <span>editar</span>
         </S.ActionIcon>

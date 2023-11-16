@@ -3,11 +3,15 @@ import { useTodoList } from "./useTodoList";
 import * as S from "./style";
 import TaskList from "../TaskList";
 import { MdPlaylistAdd } from "react-icons/md";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useEffect } from "react";
 import { TaskType } from "../../../types/types";
-const Form = () => {
-  const { setTodo, todo, todoList, addTodoList, removeTodo, ChangeTaskStatus } = useTodoList();
 
+const Form = () => {
+
+  const { setTodo, todo, todoList, addTodoList, removeTodo, ChangeTaskStatus , editFromTask} = useTodoList();
+useEffect(() => {
+  console.log(todoList, 1);
+}, [todoList]);
   const handleChangeTodo = (e: ChangeEvent<HTMLInputElement>) => {
     setTodo(e.target.value);
     console.log(todoList);
@@ -44,10 +48,11 @@ const Form = () => {
       {todoList.length > 0 && (
         <S.ContainerTask>
           {todoList.map((task: TaskType) => (
-            <TaskList task={task} removeFromTask={removeTodo} changeTaskStatus={ChangeTaskStatus}/>
+            <TaskList task={task} removeFromTask={removeTodo} changeTaskStatus={ChangeTaskStatus} editFromTask={editFromTask}/>
           ))}
         </S.ContainerTask>
       )}
+      
     </S.Main>
   );
 };

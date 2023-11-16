@@ -16,18 +16,21 @@ export const useTodoList = () => {
   };
 
   const removeTodo = (id: number) => {
-    setTodoList(todoList.filter((todo: TaskType) => todo.id !== id));
+    const removeTask = (todo: TaskType) => todo.id !== id
+    setTodoList(prevState => prevState.filter(removeTask))
   };
 
   const ChangeTaskStatus = (id: number) => {
-    setTodoList(
-      todoList
-        .filter((todo: TaskType) => todo.id === id)
-        .map((todo: TaskType): TaskType => {
-          return { ...todo, completed: true };
-        })
-    );
+    const updateTask = (todo: TaskType): TaskType => todo.id === id ? { ...todo, completed: !todo.completed }: todo
+    setTodoList(prevState =>  prevState.map(updateTask))
+
   };
 
-  return { setTodo, todo, todoList, addTodoList, removeTodo, ChangeTaskStatus };
+  const editFromTask = (id:number, newText:string) => {
+
+    setTodoList(prevState => prevState.map(todo=> todo.id === id ? {...todo, textTask:newText}: todo))
+    console.log(newText,todoList, id)
+  }
+
+  return { setTodo, todo, todoList, addTodoList, removeTodo, ChangeTaskStatus, editFromTask};
 };
