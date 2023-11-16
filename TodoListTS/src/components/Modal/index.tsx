@@ -1,4 +1,4 @@
-import { ChangeEvent, Dispatch, SetStateAction, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 import { TaskType } from '../../../types/types';
 import * as S from './style'
 
