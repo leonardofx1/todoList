@@ -96,4 +96,8 @@ export const ContainerTask = styled.section`
   margin: 1rem;
   padding: 0.5rem;
   gap: 1rem;
+  @media screen and (max-width:580px) {
+  width: 100%;
+  margin: 1rem 0;
+  }
 `;
