@@ -28,6 +28,22 @@ export const Task = styled.article`
 
   border-radius: 15px;
   p svg {
+      display: inline-block;
+      animation:none;
+      
+    }
+    & div {
+      display: flex;
+      animation:none;
+    }
+    
+
+
+
+    @media screen and (min-width:580px) {
+    
+   
+  p svg {
     display: none;
   }
   & div {
@@ -44,6 +60,7 @@ export const Task = styled.article`
       animation: ${iconsAnimation} 1s ease-in-out;
     }
   }
+  }
 `;
 
 export const TaskContent = styled.p`
@@ -59,14 +76,23 @@ export const TaskContent = styled.p`
 `;
 
 export const TaskStatusIcon = styled.div`
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap:5px;
+
   position: absolute;
-  top: 5px;
+  top: 1px;
   left: 10px;
 
   font-size: 1.5rem;
   animation: ${iconsAnimation} linear infinite;
 
   color: ${(props) => props.color};
+  @media screen and (max-width:580px) {
+    font-size:1.2rem
+  
+  }
 `;
 export const ActionIconContainer = styled.div`
   position: absolute;
@@ -76,8 +102,12 @@ export const ActionIconContainer = styled.div`
   font-size: 1.5rem;
   animation: ${iconsAnimation} linear;
 
-  color:green;
-
+  @media screen and (max-width:580px) {
+      width:95%;
+      margin-rigth:.5rem;
+      font-size:1.2rem;
+      right: -15px;
+    }
 `;
 
 export const ActionIcon= styled.div `
@@ -85,14 +115,23 @@ export const ActionIcon= styled.div `
   display:flex;
   justify-content:space-evenly;
   align-items:center;
-  gap: .5rem;;
+  gap: .5rem;
+ 
   & span {
     cursor:pointer;
     width: 0px;
     overflow: hidden;
     transition: all 500ms ease-in-out;
 
+ 
+
   }
+  @media screen and (max-width:580px) {
+    margin-right:1rem;
+    span {
+      width:auto;
+    }
+    }
 
   &:hover {
     & span {

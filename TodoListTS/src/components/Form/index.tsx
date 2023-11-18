@@ -3,15 +3,13 @@ import { useTodoList } from "./useTodoList";
 import * as S from "./style";
 import TaskList from "../TaskList";
 import { MdPlaylistAdd } from "react-icons/md";
-import { ChangeEvent, useEffect } from "react";
+import { ChangeEvent} from "react";
 import { TaskType } from "../../../types/types";
 
 const Form = () => {
 
   const { setTodo, todo, todoList, addTodoList, removeTodo, ChangeTaskStatus , editFromTask} = useTodoList();
-useEffect(() => {
-  console.log(todoList, 1);
-}, [todoList]);
+
   const handleChangeTodo = (e: ChangeEvent<HTMLInputElement>) => {
     setTodo(e.target.value);
     console.log(todoList);

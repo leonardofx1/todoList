@@ -6,7 +6,7 @@ export const ContainerModal = styled.section`
   justify-content: center;
   align-items: center;
 
-  position: absolute;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
@@ -14,7 +14,7 @@ export const ContainerModal = styled.section`
   background-color: rgb(0, 0, 0, 0.5);
 
   z-index:5;
-
+ 
   div {
     display: flex;
     flex-direction: column;
