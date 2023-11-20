@@ -5,7 +5,7 @@ interface Thema {
 }
 
 export const thema:Thema = {
-    primaryColor:'#294380',
-    primaryColorBold:'#0d0f36',
-    seconColor:'#69d2cd'
+    primaryColor:'#121214',
+    primaryColorBold:'#643bbd',
+    seconColor:'black'
 } 

@@ -14,6 +14,7 @@ export const Main = styled.main`
   align-items: center;
 
   background-color: ${thema.primaryColor};
+  gap:2rem;
   @media screen and (max-width: 580px) {
     width: auto;
     height: auto;
@@ -47,7 +48,7 @@ export const Form = styled.form`
 
   label {
     width: 100%;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: column;
 
@@ -86,6 +87,7 @@ export const ContainerInput = styled.div`
     background-color: ${thema.seconColor};
     border-radius: 0 5px 5px 0;
     border: none;
+    color:white;
 
     font-size: 1.8rem;
     font-weight: bold;

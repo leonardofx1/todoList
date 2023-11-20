@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { thema } from '../../styles/thema'
 
 export const Header = styled.header `
     display:flex;
@@ -8,11 +9,11 @@ export const Header = styled.header `
     width:100%;
     height:55px;
 
-    background-color: #0d0f36;
+    background-color: ${thema.primaryColor};
     border-bottom:2px solid white;
 
     h1 {
-        color:#69d2cd;
+        color:${thema.primaryColorBold};
         font-size:2rem;
     }
 
