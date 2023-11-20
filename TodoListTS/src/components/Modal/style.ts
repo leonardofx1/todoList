@@ -45,6 +45,7 @@ export const ContainerModal = styled.section`
 
 
       background-color: ${thema.seconColor};
+      color:white;
 
       border-radius: 15px;
       border: none;
