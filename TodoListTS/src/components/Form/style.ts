@@ -112,6 +112,9 @@ export const ContainerTask = styled.section`
 
   padding: 0.5rem;
   gap: 1rem;
+
+
+  border-radius: 8px;
   @media screen and (max-width: 580px) {
     width: 100%;
     align-self: self-start;
