@@ -38,6 +38,7 @@ export const Form = styled.form`
   background-color: ${thema.primaryColorBold};
   border-radius: 15px;
   border: 2px solid white;
+  margin:0 1rem;
   @media screen and (max-width: 580px) {
     width: 90%;
     margin-bottom: -1rem;
