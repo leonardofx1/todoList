@@ -4,17 +4,22 @@ import { thema } from "../../styles/thema";
 export const Main = styled.main`
   display: flex;
   flex-wrap: wrap;
+
   width: 100%;
   min-height: 100vh;
 
   padding: 0.5rem;
+
   justify-content: center;
   align-items: center;
+
   background-color: ${thema.primaryColor};
-  @media screen and (max-width:580px) {
+  @media screen and (max-width: 580px) {
     width: auto;
     height: auto;
-  
+
+    justify-content: center;
+    gap:1rem;
   }
 `;
 
@@ -25,21 +30,22 @@ export const Form = styled.form`
   align-items: center;
 
   width: 450px;
-  height: 450px;
+  height: 100px;
 
   min-width: 320px;
 
   padding: 1rem;
-  background-color: ${thema.prymariColorBold};
+  background-color: ${thema.primaryColorBold};
   border-radius: 15px;
   border: 2px solid white;
-   @media screen and (max-width:580px) {
-    width: 300px;
-    height: 320px;
-  
+  @media screen and (max-width: 580px) {
+    width: 90%;
+    margin-bottom: -1rem;
   }
+
+
   label {
-    width: 80%;
+    width: 100%;
     color: white;
     display: flex;
     flex-direction: column;
@@ -47,40 +53,48 @@ export const Form = styled.form`
     gap: 1.5rem;
     font-weight: bold;
     font-size: 2rem;
+  }
+`;
 
-    input {
-      width: 90%;
-      border-radius: 5px;
-      border: none;
-      padding: 0.9rem;
-      &::placeholder {
-        font-weight: bold;
-        font-size: 1.2rem;
-        color: #0d0f36;
-      }
+export const ContainerInput = styled.div`
+  display:flex;
+  justify-content: center;
+
+  width:100%;
+  
+  input {
+    width:100%;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding: 0.9rem;
+
+    &::placeholder {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #0d0f36;
+    }
+    &:focus {
+      outline: none;
     }
   }
-
   button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 80%;
+    width: auto;
     background-color: ${thema.seconColor};
-    border-radius: 15px;
+    border-radius: 0 5px 5px 0;
     border: none;
 
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: bold;
 
     cursor: pointer;
 
-    span {
-      margin: 5px 15px 0 0;
-      font-size: 2.5rem;
-    }
+
   }
 `;
+
 export const ContainerTask = styled.section`
   display: flex;
   justify-content: center;
@@ -91,13 +105,13 @@ export const ContainerTask = styled.section`
   min-width: auto;
   width: 100%;
 
-  padding: 0.2rem;
-  background-color: ${thema.prymariColorBold};
-  margin: 1rem;
+  background-color: ${thema.primaryColorBold};
+
   padding: 0.5rem;
   gap: 1rem;
-  @media screen and (max-width:580px) {
-  width: 100%;
-  margin: 1rem 0;
+  @media screen and (max-width: 580px) {
+    width: 100%;
+    align-self: self-start;
+    margin-top:-1rem;
   }
 `;

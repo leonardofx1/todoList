@@ -20,10 +20,10 @@ export const ContainerModal = styled.section`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: ${thema.prymariColorBold};
+    background-color: ${thema.primaryColorBold};
 
     width: 400px;
-    height: 300px;
+    height: 200px;
 
     border-radius: 1rem;
     label {

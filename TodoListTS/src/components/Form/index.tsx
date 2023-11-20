@@ -24,7 +24,8 @@ const Form = () => {
       <S.Form>
         <label htmlFor="tarefas">
           criar tarefas
-          <input
+        <S.ContainerInput>
+        <input
             onChange={handleChangeTodo}
             value={todo}
             type="text"
@@ -32,16 +33,18 @@ const Form = () => {
             id="tarefas"
             placeholder="criar tarefa"
           />
-        </label>
-        <button
+             <button
           onClick={handleAddTodoList}
           disabled={todo.length < 1 ? true : false}
         >
-          <span>
+  
             <MdPlaylistAdd />
-          </span>
-          adicionar tarefa
+        
+     
         </button>
+        </S.ContainerInput>
+        </label>
+     
       </S.Form>
       {todoList.length > 0 && (
         <S.ContainerTask>
