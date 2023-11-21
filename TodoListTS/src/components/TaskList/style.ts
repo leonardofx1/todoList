@@ -23,8 +23,8 @@ export const Task = styled.article`
   align-items: center;
   width: 95%;
   min-height: 80px;
-  background-color: ${thema.primaryColor};
-  padding: 0.4rem;
+  background-color: ${thema.primaryColorBold};
+  padding:.7rem;
 
   border-radius: 15px;
   p svg {
@@ -61,6 +61,8 @@ export const Task = styled.article`
     }
   }
   }
+  
+
 `;
 
 export const TaskContent = styled.p`

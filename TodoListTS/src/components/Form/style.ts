@@ -29,34 +29,38 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap:wrap;
 
   width: 450px;
   height: 100px;
 
-  min-width: 320px;
+  min-width: 200px;
+  
 
   padding: 1rem;
   background-color: ${thema.primaryColorBold};
   border-radius: 15px;
   border: 2px solid white;
   margin:0 1rem;
-  @media screen and (max-width: 580px) {
-    width: 90%;
-    margin-bottom: -1rem;
-  }
-
+  
 
   label {
     width: 100%;
     color: black;
     display: flex;
     flex-direction: column;
-
+    
     gap: 1.5rem;
     font-weight: bold;
     font-size: 2rem;
   }
-`;
+  @media screen and (max-width: 580px) {
+    width: 98%;
+    margin-bottom: -1rem;
+  
+  }
+ 
+  `;
 
 export const ContainerInput = styled.div`
   display:flex;
@@ -96,6 +100,7 @@ export const ContainerInput = styled.div`
 
 
   }
+
 `;
 
 export const ContainerTask = styled.section`
@@ -108,7 +113,7 @@ export const ContainerTask = styled.section`
   min-width: auto;
   width: 100%;
 
-  background-color: ${thema.primaryColorBold};
+  background-color: trasnparent;
 
   padding: 0.5rem;
   gap: 1rem;

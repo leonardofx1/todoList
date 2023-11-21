@@ -12,4 +12,7 @@ export const Footer = styled.footer`
 
   font-size: 2rem;
   border-top: 2px solid white;
+  @media screen and (max-width:350px) {
+   font-size:1.5rem ;
+  }
 `;
